@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+@import url(variable.css);
+
+@font-face {
+    font-family: pokemon;
+    src: url(/fuentes/Ketchum.otf);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    background-color: var();
+}
+
+
+.main__h1{
+    font-family: pokemon;
+    font-weight: 600;
+    font-size: 60px;
+    color: var(--bg-celeste);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap:20px;
+}
+
+.main__form{
+    display: flex;
+    flex-direction: column;
+
+}
