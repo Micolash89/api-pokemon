@@ -1,47 +1,117 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap");
 
 @import url(variable.css);
 
 @font-face {
-    font-family: pokemon;
-    src: url(/fuentes/Ketchum.otf);
+  font-family: pokemon;
+  src: url(/fuentes/Ketchum.otf);
 }
 
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-body{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
-.header{
-    display: flex;
-    justify-content: center;
-    background-color: var();
+.header__img {
+  width: 50%;
+}
+
+/**/
+.pokemon-block,
+.pokemon-block-back {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 3px 15px rgba(12, 13, 121, 0.432);
+}
+
+.img-container {
+  /* background-image: url("./blob.svg"); */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.name {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+/**/
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-celeste);
+}
+
+.main__h1 {
+  font-family: pokemon;
+  font-weight: 600;
+  font-size: 60px;
+  color: var(--bg-celeste);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  
+}
+
+.main__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.pokemon-container {
+  display: flex;
+  gap: 64px;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  justify-content: space-between;
+}
+
+.main__img {
+  width: 30%;
+  align-self: center;
+  /* display: none; */
 }
 
 
-.main__h1{
-    font-family: pokemon;
-    font-weight: 600;
-    font-size: 60px;
-    color: var(--bg-celeste);
+/*girar la carta*/
+
+.card-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+
 }
 
-.main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    gap:20px;
+.flip-card:hover .card-container {
+  transform: rotateY(540deg);
+  cursor: pointer;
 }
 
-.main__form{
-    display: flex;
-    flex-direction: column;
+.pokemon-block,
+.pokemon-block-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
 
+.pokemon-block-back {
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0%;
 }

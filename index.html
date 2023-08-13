@@ -1,45 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/estilos.css" />
     <title>Document</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <header class="header">
-
-        <img class="header__img" src="images/International_Pokémon_logo.svg.png" alt="">
-
+      <img
+        class="header__img"
+        src="images/International_Pokémon_logo.svg.png"
+        alt=""
+      />
     </header>
 
     <main class="main">
+      <h1 class="main__h1">POKEDEX</h1>
 
-        <h1 class="main__h1">BUSCADOR DE POKEMON</h1>
+      <h2 class="main__h2">atrapalos ya!!</h2>
 
-        <h2 class="main__h2">atrapalos ya!!</h2>
+      <p class="main__p">
+        Bienvenido a nuestra página de búsqueda de Pokémon por nombre. ¿Quieres
+        encontrar rápidamente el nombre y el número de identificación de un
+        Pokémon en particular? ¡Estamos aquí para facilitarte eso! Simplemente
+        ingresa el nombre del Pokémon que estás buscando en nuestra barra de
+        búsqueda, y en un instante te proporcionaremos el nombre completo del
+        Pokémon y su número de identificación único. Ya sea que necesites esta
+        información para completar tu Pokédex o para satisfacer tu curiosidad,
+        nuestra herramienta te ayudará a obtener los datos que necesitas de
+        manera eficiente. ¡Empieza tu búsqueda de Pokémon ahora y descubre sus
+        nombres y números al instante!
+      </p>
 
-        <p class="main__p">Bienvenido a nuestra página de búsqueda de Pokémon por nombre. ¿Quieres encontrar rápidamente el nombre y el número de identificación de un Pokémon en particular? ¡Estamos aquí para facilitarte eso! Simplemente ingresa el nombre del Pokémon que estás buscando en nuestra barra de búsqueda, y en un instante te proporcionaremos el nombre completo del Pokémon y su número de identificación único. Ya sea que necesites esta información para completar tu Pokédex o para satisfacer tu curiosidad, nuestra herramienta te ayudará a obtener los datos que necesitas de manera eficiente. ¡Empieza tu búsqueda de Pokémon ahora y descubre sus nombres y números al instante!</p>
+      <form action="" class="main__form">
+        <span class="main__form--span"> ingrese nombre de pokemon </span>
+        <input class="main__form--input input1" type="text" />
+        <br />
 
-        <form  class="main__form">
-            <span class="main__form--span">
-                ingrese nombre de pokemon 
-            </span>
-            <input class="main__form--input input1" type="text">
-            <br>
-            
-            <input class="main__form--input input2" type="button" value="Buscar Pokemon" id="btn">
+        <input
+          class="main__form--input input2"
+          type="button"
+          value="Buscar Pokemon"
+          id="btn"
+        />
+      </form>
 
-        </form>
-
+      <div class="pokemon-container"></div>
     </main>
 
-    <footer>
+    <footer></footer>
 
-    </footer>
-
-   
-    <script src="js/javaScript.js" ></script>
-</body>
+    <script src="js/javaScript.js"></script>
+  </body>
 </html>
