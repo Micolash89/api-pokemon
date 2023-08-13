@@ -93,15 +93,10 @@ async function fetchData() {
 
     let input = document.querySelector("input");
 
-    console.log(vec.length)
-
-    if (vec.length==0)
-      return alert(`No hay resultados para los pokemon`);
     if (input.value.trim == 0)
       return alert(`ingrese una palabra`);
 
-    console.log(vec[0])
-
+   // console.log(vec[0])
 
     for (let i = 0; i < vec.length; i++) {
       let bandera = 0;
