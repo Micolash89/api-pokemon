@@ -32,6 +32,8 @@ function createPokemon(pokemon) {
   const spitContainer = document.createElement("div");
   spitContainer.classList.add("img-container");
 
+  console.log(pokemon);
+
   const sprite = document.createElement("img");
   sprite.src = pokemon.sprites.front_default;
 
@@ -52,12 +54,40 @@ function createPokemon(pokemon) {
 
   const cardBack = document.createElement("div");
   cardBack.classList.add("pokemon-block-back");
-  cardBack.textContent = "carta de atras";
-
+  
+  const imgBack = document.createElement("img");
+  imgBack.src = (pokemon.sprites.back_default) ? pokemon.sprites.back_default : pokemon.sprites.front_default;
+  cardBack.appendChild(imgBack);
+  
+  const cardZoom = document.createElement("div");
+  cardZoom.classList.add("pokemon-block-zoom");
+  const imgZoom = document.createElement("img");
+  cardZoom.style.display = "none";
+  imgZoom.src = pokemon.sprites.other['official-artwork'].front_default;
+  cardZoom.appendChild(imgZoom);
+  
+  
   cardContainer.appendChild(card);
   cardContainer.appendChild(cardBack);
   //pokemonContainer.appendchild(card);
+  cardContainer.appendChild(cardZoom);
   pokemonContainer.appendChild(flipCard);
+
+  cardBack.addEventListener("click", () => {
+    cardContainer.style.position="static"
+    cardBack.style.position="static"
+    cardBack.style.display = "none";
+    cardZoom.style.display = "block";
+    
+  });
+  cardZoom.addEventListener("click", () => {
+    cardContainer.style.position="relative"
+    cardBack.style.position="absolute"
+    cardBack.style.display = "block";
+    cardBack.style.position = "absolute";
+    cardZoom.style.display = "none";
+  });
+ 
 }
 
 const options = {
@@ -96,7 +126,7 @@ async function fetchData() {
     if (input.value.trim == 0)
       return alert(`ingrese una palabra`);
 
-   // console.log(vec[0])
+    // console.log(vec[0])
 
     for (let i = 0; i < vec.length; i++) {
       let bandera = 0;
@@ -107,16 +137,19 @@ async function fetchData() {
           vec[i].name.toLowerCase().charAt(j)
         )
           bandera++;
-        else break;
+        else
+          break;
       }
 
-      if (input.value.length == bandera) {
+      if (input.value.length == bandera)
         fetchPokemon(vec[i].id);
-      }
+
     }
   } catch (error) {
     console.error(error);
   }
 }
+
+
 
 //fetchData();

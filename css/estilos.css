@@ -76,7 +76,7 @@ body {
   width: 100%;
   flex-wrap: wrap;
   padding: 0 10px;
-  justify-content: space-between;
+  justify-content: left;
 }
 
 .main__img {
@@ -113,5 +113,49 @@ body {
 .pokemon-block-back {
   transform: rotateY(180deg);
   position: absolute;
+  
   top: 0%;
 }
+
+.main__form--span{
+
+}
+
+.main__form{
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+}
+
+.input1{
+  width: 300px;
+  height: 30px;
+  margin: auto;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.input2{
+  width: 150px;
+  height: 50px;
+  margin: auto;
+  border-radius: 15px;
+  background:#679FED ;
+  color: white;
+  cursor: pointer;
+}
+
+.input2:hover{
+  box-shadow: 0px 0px 15px -3px black inset;
+  
+}
+
+.pokemon-block-zoom{
+  /* position: fixed; */
+  left: 50%;
+  right: 50%;
+ 
+}
+
+
+
